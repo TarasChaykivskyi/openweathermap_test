@@ -39,9 +39,8 @@
   font-size: 32px;
 }
 
-.current-date {
-  bottom: 10px;
-  right: 30px;
+.list-whether-week {
+  height: 200px;
 }
 
 .container-search-saved {
@@ -54,6 +53,18 @@
     &:hover {
       color: red !important;
 
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .list-whether-week {
+    height: auto;
+
+    ul {
+      flex-wrap: wrap;
+      justify-content: center !important;
     }
   }
 }

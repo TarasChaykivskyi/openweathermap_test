@@ -11,8 +11,6 @@
           <div class="pr-3">
             <span class="d-block">Min temperature: {{ CURRENT_WHETHER.temp_min }}&deg;</span>
             <span class="d-block">Max temperature: {{ CURRENT_WHETHER.temp_max }}&deg;</span>
-          </div>
-          <div class="position-absolute current-date">
             <span class="d-block">Current date: {{ currentDate }}</span>
           </div>
         </div>
@@ -37,7 +35,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

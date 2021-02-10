@@ -1,9 +1,9 @@
 <template>
-  <div class="w-100 border border-primary mb-4" style="height: 200px">
-    <ul class="d-flex justify-content-between align-items-center p-0 h-100">
-      <li class="text-center list-unstyled" v-for="item in WEEK_WHETHER" :key="item.id">
-        <span class="d-block text-warning font-weight-bold fz-15">{{ setDayOfWeek(item.dt) }}</span>
+  <div class="w-100 border border-primary mb-4 list-whether-week">
+    <ul class="d-flex justify-content-around align-items-center p-0 h-100">
+      <li class="text-center list-unstyled h-100" v-for="item in WEEK_WHETHER" :key="item.id">
         <img :src="'http://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" alt="icon">
+        <span class="d-block text-warning font-weight-bold fz-15">{{ setDayOfWeek(item.dt) }}</span>
         <span class="d-block text-danger font-weight-bold fz-24">{{Math.round(item.main.temp - 273)}}&deg;C</span>
       </li>
     </ul>
@@ -34,7 +34,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

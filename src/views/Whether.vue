@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <template v-if="CURRENT_WHETHER">
-      <div class="row pt-5" >
+      <div class="row pt-5">
         <CurrentWhether/>
         <WhetherOtherDetails/>
       </div>
@@ -31,12 +31,8 @@ export default {
   },
   created() {
     setTimeout(() => {
-      if(!this.CURRENT_WHETHER) this.$router.replace({name: 'Home'})
+      if (!this.CURRENT_WHETHER) this.$router.replace({name: 'Home'})
     }, 200)
   }
 }
 </script>
-
-<style scoped>
-
-</style>

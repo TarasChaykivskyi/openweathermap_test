@@ -2,7 +2,7 @@
   <div class="border-bottom border-success">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-8 col-lg-6 py-4 px-0 m-auto position-relative">
+        <div class="col-10 col-md-8 col-lg-6 py-4 px-0 m-auto position-relative">
           <input class="form-control border-success shadow-none"
                  type="search"
                  placeholder="Whether in your city"
@@ -55,11 +55,11 @@ export default {
     async getPlace(value) {
       this.showList = false;
       this.showList = false
-      if(this.$route.params.id !== 'whether-' + value.toLowerCase()) {
+      if (this.$route.params.id !== 'whether-' + value.toLowerCase()) {
         this.$router.push({name: 'Whether', params: {id: 'whether-' + value.toLowerCase()}});
       }
       await this.GET_CURRENT_WHETHER(value);
-      await this.GET_WEEK_WHETHER();
+      await this.GET_WEEK_WHETHER(value);
     },
     searchPlace(value) {
       this.showList = true;
@@ -68,7 +68,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
